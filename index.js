@@ -1,2 +1,11 @@
 const axios = require("axios");
-console.log("Hello World!")
+const coordinatesGenerator = require("./functions/coordinatesGenerator")
+
+async function main(){
+
+    await coordinatesGenerator()
+
+}
+
+
+main();
