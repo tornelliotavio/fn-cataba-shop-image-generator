@@ -2,22 +2,24 @@ require("dotenv").config();
 
 const fs = require("fs");
 const requests = require("./requests");
+const sortShopEntries = require("./sortShopEntries");
 
 async function coordinatesGenerator() {
-    
-    let shop = await requests.shop();
 
-    let shopSections = (await requests.shopSections()).sectionList.sections;
+  let sortedShopEntries = await sortShopEntries();
 
-    let sortedShop = []
+    //coordinate generator settings
+    const tileSize = {
+        DoubleWide:{
 
-    for(let sec of shopSections){
-        for(let entrie of shop.shop){
-            if(entrie.section.id===sec.sectionId) sortedShop.push(entrie);
         }
-    }//bubble sort bad
+    }
 
-    fs.writeFileSync("./out/sortedShop.json",JSON.stringify(sortedShop))
+    for(let entryIndex in sortedShopEntries){
+
+        console.log(entryIndex)
+
+    }
 
 }
 
