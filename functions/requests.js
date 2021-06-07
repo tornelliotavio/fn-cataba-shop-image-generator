@@ -16,7 +16,7 @@ async function shop() {
 async function shopSections() {
     let mainRequest = await axios.get("https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/shop-sections");
   
-    return mainRequest.data;
+    return mainRequest.data.sectionList.sections;
   
   }
 

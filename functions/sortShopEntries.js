@@ -1,11 +1,7 @@
 const requests = require("./requests");
 
-async function sortShopEntries(useSortFunction = false) {
-  let shop = await requests.shop();
+function sortShopEntries(shop, shopSections, useSortFunction = false) {
   let shopEntries;
-
-  let shopSections = (await requests.shopSections()).sectionList.sections;
-
   if (useSortFunction) {
     shopEntries = shop.shop;
     shopEntries.sort((a, b) => {

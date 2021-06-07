@@ -1,0 +1,15 @@
+{
+  "baseHeight": 248,
+  "DoubleWide": {
+    "widthMultiplier": 1.2,
+    "heightMultiplier": 1
+  },
+  "Normal": {
+    "widthMultiplier": 0.58,
+    "heightMultiplier": 1
+  },
+  "Small": {
+    "widthMultiplier": 0.58,
+    "heightMultiplier": 0.477
+  }
+}
